@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+Загрузка файлов
+{% endblock title %}
+
+
+{% block body %}
+    <div class="upl">
+<!--         <span class="topName">Загрузка файлов на сервер</span> -->
+        <form class="uplForm" action="" name="upload" method="POST" enctype="multipart/form-data">
+            <input type="file" name="myfile">
+            <p>Перетащите файлы или просто кликните на эту область.</p>
+            <button type="submit">Загрузить</button>
+        </form>
+    </div>
+{% endblock body %}

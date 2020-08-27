@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+  <nav class="navbar is-dark">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="/" style="font-weight:bold;">
+          <img src="static/img/Vector.svg" alt="avatar" class="img">
+        </a>
+      </div>
+      <div id="navMenu" class="navbar-menu">
+        <div class="navbar-end">
+          <a href="/" class="navbar-item">Home</a>
+          <a href="/uploads" class="navbar-item">Upload</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <section class="section">
+    <div class="container">
+      <main>
+        {% block body %}{% endblock %}
+      </main>
+    </div>
+  </section>
+    <footer class="container">
+        <div class="row">
+          <div class="col-12 col-md">
+            <small class="d-block mb-3 text-muted">© 2020 DarkKun</small>
+          </div>
+        </div>
+      </footer>
+    <link rel="stylesheet" href="{{ url_for('static', filename='js/index.js') }}">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+</body>
+</html>
