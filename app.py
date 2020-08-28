@@ -21,6 +21,7 @@ def upload_file():
         myfile = request.files['myfile']
         if myfile and allowed_file(myfile.filename):
             filename = secure_filename(myfile.filename)
+            print(filename)
             myfile.save(os.path.join(UPLOAD_FOLDER, filename))
             return redirect(url_for('uploaded_file',
                                     filename=filename))
